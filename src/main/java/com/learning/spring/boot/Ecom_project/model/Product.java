@@ -1,11 +1,7 @@
 package com.learning.spring.boot.Ecom_project.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.NamedEntityGraph;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import jakarta.persistence.*;
+import lombok.*;
 
 import java.math.BigDecimal;
 import java.util.Date;
@@ -18,6 +14,8 @@ import java.util.Date;
 public class Product {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private int id;
     private String name;
     private String desc;
@@ -27,4 +25,6 @@ public class Product {
     private Date releaseDate;
     private Boolean availability ;
     private int quantity;
+
+
 }
