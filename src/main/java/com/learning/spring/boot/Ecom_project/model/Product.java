@@ -19,22 +19,23 @@ public class Product {
 
     private int id;
     private String name;
-    private String desc;
+    private String description;
     private String brand;
     private BigDecimal price;
     private String category;
 
-   @JsonFormat(shape = JsonFormat.Shape.STRING,pattern="dd-MM-yyyy")
+   ///@JsonFormat(shape = JsonFormat.Shape.STRING,pattern="dd-MM-yyyy")
     private Date releaseDate;
 
-    private Boolean availability ;
-    private int quantity;
+    private Boolean productAvailable ;
+    private int stockQuantity;
 
     private String imageName;
     private String imageType;
 
     @Lob
     private byte[] imageData;
+
 
     public int getId() {
         return id;
@@ -52,12 +53,12 @@ public class Product {
         this.name = name;
     }
 
-    public String getDesc() {
-        return desc;
+    public String getDescription() {
+        return description;
     }
 
-    public void setDesc(String desc) {
-        this.desc = desc;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public String getBrand() {
@@ -92,20 +93,20 @@ public class Product {
         this.releaseDate = releaseDate;
     }
 
-    public Boolean getAvailability() {
-        return availability;
+    public Boolean getProductAvailable() {
+        return productAvailable;
     }
 
-    public void setAvailability(Boolean availability) {
-        this.availability = availability;
+    public void setProductAvailable(Boolean productAvailable) {
+        this.productAvailable = productAvailable;
     }
 
-    public int getQuantity() {
-        return quantity;
+    public int getStockQuantity() {
+        return stockQuantity;
     }
 
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
+    public void setStockQuantity(int stockQuantity) {
+        this.stockQuantity = stockQuantity;
     }
 
     public String getImageName() {
