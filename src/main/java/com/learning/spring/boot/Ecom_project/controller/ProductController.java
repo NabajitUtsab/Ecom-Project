@@ -112,6 +112,13 @@ public class ProductController {
 
 
 
+    @GetMapping("/products/search")
+    public ResponseEntity<List<Product>> searchingProducts(@RequestParam String keyword){
+        List<Product> prod=productService.searchByKeyword(keyword);
+
+        return new ResponseEntity<>(prod, HttpStatus.OK);
+
+    }
 
 
 }

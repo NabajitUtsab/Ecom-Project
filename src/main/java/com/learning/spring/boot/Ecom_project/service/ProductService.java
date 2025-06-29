@@ -40,7 +40,15 @@ public class ProductService {
         return repo.save(product);
     }
 
+
     public void deleteProductById(int id) {
          repo.deleteById(id);
+    }
+
+
+
+    public List<Product> searchByKeyword(String keyword) {
+        return repo.searchProduct(keyword);
+
     }
 }
